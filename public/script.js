@@ -85,9 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Molecular Network Generator ---
     function generateMolecularNetwork(container) {
         if (!container) return;
-        const width = 400;
-        const height = 400;
-        const nodeCount = 12;
+        const width = 600;
+        const height = 600;
+        const nodeCount = 18;
         const nodes = [];
 
         const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -96,25 +96,26 @@ document.addEventListener('DOMContentLoaded', () => {
         svg.setAttribute("height", "100%");
 
         for (let i = 0; i < nodeCount; i++) {
-            const angle = (i / nodeCount) * Math.PI * 2;
-            const radius = 80 + Math.random() * 80;
+            const angle = Math.random() * Math.PI * 2;
+            const radius = 50 + Math.random() * 200;
             nodes.push({
                 x: width / 2 + Math.cos(angle) * radius,
-                y: height / 2 + Math.sin(angle) * radius
+                y: height / 2 + Math.sin(angle) * radius,
+                r: 2 + Math.random() * 4
             });
         }
 
         for (let i = 0; i < nodes.length; i++) {
             for (let j = i + 1; j < nodes.length; j++) {
                 const dist = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
-                if (dist < 150) {
+                if (dist < 180) {
                     const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
                     line.setAttribute("x1", nodes[i].x);
                     line.setAttribute("y1", nodes[i].y);
                     line.setAttribute("x2", nodes[j].x);
                     line.setAttribute("y2", nodes[j].y);
-                    line.setAttribute("stroke", "rgba(255, 255, 255, 0.1)");
-                    line.setAttribute("stroke-width", "0.8");
+                    line.setAttribute("stroke", "rgba(45, 106, 79, 0.15)");
+                    line.setAttribute("stroke-width", "1");
                     svg.appendChild(line);
                 }
             }
@@ -124,8 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
             circle.setAttribute("cx", node.x);
             circle.setAttribute("cy", node.y);
-            circle.setAttribute("r", 4 + Math.random() * 4);
-            circle.setAttribute("fill", "rgba(255, 255, 255, 0.2)");
+            circle.setAttribute("r", node.r);
+            circle.setAttribute("fill", "rgba(45, 106, 79, 0.3)");
             svg.appendChild(circle);
         });
 

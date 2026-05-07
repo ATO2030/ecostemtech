@@ -639,7 +639,7 @@ nav.scrolled {
 
 /* --- Market --- */
 #market {
-    background-color: var(--p-forest);
+    background: linear-gradient(135deg, var(--p-forest), #0B1D15);
     color: white;
 }
 
@@ -960,11 +960,11 @@ nav.scrolled {
 .roadmap-timeline::before {
     content: '';
     position: absolute;
-    top: 45px;
+    top: 50px;
     left: 0;
     width: 100%;
-    height: 2px;
-    background: rgba(45, 106, 79, 0.1);
+    height: 1px;
+    background: rgba(45, 106, 79, 0.2);
     z-index: 1;
 }
 
@@ -976,13 +976,13 @@ nav.scrolled {
 
 .phase::after {
     content: '';
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     background: white;
-    border: 4px solid var(--eco-green);
+    border: 3px solid var(--eco-green);
     border-radius: 50%;
     display: block;
-    margin: 0 auto 32px;
+    margin: 41px auto 32px; /* Adjusted to sit on the line */
 }
 
 .phase-title {
