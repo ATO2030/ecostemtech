@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -34,6 +34,9 @@
             --eco-text-muted:    #6B6B7A;
             --eco-white:         #FFFFFF;
 
+            --font-display:      'Instrument Serif', serif;
+            --font-body:         'Plus Jakarta Sans', sans-serif;
+
             --transition: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
             --nav-height: 72px;
         }
@@ -49,16 +52,18 @@
         }
 
         body {
-            font-family: 'Jost', sans-serif;
+            font-family: var(--font-body);
             background-color: var(--eco-beige);
             color: var(--eco-text);
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         h1, h2, h3, .serif {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
+            font-family: var(--font-display);
+            font-weight: 400;
+            letter-spacing: -0.01em;
         }
 
         section {
@@ -126,17 +131,18 @@
         }
 
         .logo-main {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 24px;
-            font-weight: 600;
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 400;
             line-height: 1;
         }
 
         .logo-sub {
-            font-size: 10px;
-            font-style: italic;
-            opacity: 0.8;
-            letter-spacing: 0.05em;
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            opacity: 0.9;
+            letter-spacing: 0.1em;
         }
 
         .nav-links {
@@ -148,11 +154,12 @@
             text-decoration: none;
             color: var(--eco-white);
             font-size: 14px;
-            font-weight: 400;
-            opacity: 0.8;
+            font-weight: 500;
+            opacity: 0.7;
             transition: 0.3s;
             padding-bottom: 4px;
             border-bottom: 2px solid transparent;
+            letter-spacing: 0.02em;
         }
 
         .nav-links a:hover, .nav-links a.active {
@@ -167,11 +174,11 @@
         .cta-invest {
             background: var(--eco-green-med);
             color: white;
-            padding: 10px 20px;
-            border-radius: 4px;
+            padding: 12px 24px;
+            border-radius: 8px;
             text-decoration: none;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
             transition: 0.3s;
             position: relative;
             overflow: hidden;
@@ -211,17 +218,20 @@
         }
 
         .hero-title {
-            font-size: 68px;
-            line-height: 1.1;
+            font-size: 84px;
+            line-height: 0.95;
             margin-bottom: 24px;
+            font-style: italic;
         }
 
         .hero-subtitle {
-            font-size: 18px;
-            font-weight: 300;
-            color: var(--eco-green-light);
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--eco-white);
+            opacity: 0.9;
             margin-bottom: 32px;
             max-width: 500px;
+            line-height: 1.5;
         }
 
         .hero-features {
@@ -235,7 +245,8 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 14px;
+            font-size: 15px;
+            font-weight: 500;
             color: var(--eco-bordo-light);
         }
 
@@ -246,11 +257,11 @@
         }
 
         .btn {
-            padding: 14px 28px;
-            border-radius: 4px;
+            padding: 16px 32px;
+            border-radius: 8px;
             text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
+            font-size: 16px;
+            font-weight: 600;
             transition: 0.3s;
             cursor: pointer;
         }
@@ -282,8 +293,11 @@
 
         .metric-item b {
             display: block;
-            font-size: 18px;
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 400;
             margin-bottom: 4px;
+            color: var(--eco-green-light);
         }
 
         .hero-visual {
@@ -343,12 +357,13 @@
         }
 
         .tag {
-            font-size: 12px;
-            font-weight: 500;
+            font-size: 13px;
+            font-weight: 700;
             color: var(--eco-green-dark);
-            letter-spacing: 0.15em;
+            letter-spacing: 0.2em;
             margin-bottom: 16px;
             display: block;
+            text-transform: uppercase;
         }
 
         .section-title {
@@ -365,11 +380,11 @@
         }
 
         .mission-quote {
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            font-size: 20px;
+            font-family: var(--font-display);
+            font-size: 28px;
+            line-height: 1.2;
             color: var(--eco-bordo);
-            border-left: 2px solid var(--eco-bordo);
+            border-left: 3px solid var(--eco-bordo);
             padding-left: 24px;
             margin-top: 32px;
         }
@@ -406,8 +421,9 @@
         }
 
         .info-card p {
-            font-size: 14px;
-            color: var(--eco-text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--eco-text-mid);
         }
 
         .partner-stripe {
@@ -506,8 +522,8 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 12px;
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 15px;
+            font-weight: 700;
             color: white;
             transition: 0.3s;
         }
@@ -520,16 +536,17 @@
         }
 
         .step-title {
-            font-size: 11px;
-            font-weight: 600;
-            margin-bottom: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 6px;
             text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .step-text {
-            font-size: 10px;
-            color: var(--eco-text-muted);
-            line-height: 1.3;
+            font-size: 12px;
+            color: var(--eco-text-mid);
+            line-height: 1.4;
         }
 
         .pipeline-arrow {
@@ -562,10 +579,11 @@
         }
 
         .mini-pill {
-            padding: 4px 10px;
+            padding: 6px 12px;
             border-radius: 20px;
-            font-size: 10px;
-            font-weight: 500;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
         }
 
         .bordo .mini-pill { background: var(--eco-bordo); color: white; }
@@ -588,10 +606,11 @@
         }
 
         .metric-num {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 72px;
+            font-family: var(--font-display);
+            font-size: 88px;
             line-height: 1;
             margin-bottom: 8px;
+            font-weight: 400;
         }
 
         .metric-label {
@@ -801,15 +820,17 @@
         }
 
         .kpi-val {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 32px;
+            font-family: var(--font-display);
+            font-size: 36px;
             margin-bottom: 4px;
         }
 
         .kpi-label {
-            font-size: 11px;
+            font-size: 12px;
+            font-weight: 600;
             opacity: 0.8;
             text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .seed-round-card {
@@ -857,9 +878,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
+            font-size: 36px;
+            font-family: var(--font-display);
+            font-weight: 400;
         }
 
         .avatar.green { background: var(--eco-green-pale); color: var(--eco-green-dark); }
@@ -879,9 +900,10 @@
         }
 
         .team-card p {
-            font-size: 13px;
+            font-size: 14px;
             font-style: italic;
             color: var(--eco-text-muted);
+            line-height: 1.4;
         }
 
         .roadmap-container {
@@ -932,13 +954,15 @@
         }
 
         .phase-year {
-            font-size: 13px;
-            color: var(--eco-text-muted);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--eco-green-med);
         }
 
         .phase-content {
-            font-size: 12px;
+            font-size: 13px;
             color: var(--eco-text-mid);
+            line-height: 1.5;
         }
 
         .phase-content b {
@@ -969,14 +993,17 @@
 
         .impact-val {
             display: block;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 28px;
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 400;
             color: var(--eco-green-dark);
         }
 
         .impact-label {
-            font-size: 11px;
+            font-size: 12px;
+            font-weight: 600;
             color: var(--eco-text-muted);
+            text-transform: uppercase;
         }
 
         .sdgs {
@@ -987,11 +1014,11 @@
         }
 
         .sdg-badge {
-            font-size: 10px;
-            padding: 2px 8px;
+            font-size: 11px;
+            padding: 4px 10px;
             border-radius: 4px;
             color: white;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .ip-portfolio {
@@ -1001,12 +1028,13 @@
         }
 
         .ip-card {
-            padding: 16px;
-            border-radius: 4px;
-            font-size: 13px;
+            padding: 18px;
+            border-radius: 8px;
+            font-size: 14px;
             display: flex;
             align-items: center;
             gap: 12px;
+            font-weight: 500;
         }
 
         .ip-card.green { background: var(--eco-green-pale); border: 1px solid var(--eco-green-med); }
@@ -1060,20 +1088,21 @@
 
         .form-group label {
             display: block;
-            font-size: 12px;
+            font-size: 13px;
+            font-weight: 600;
             margin-bottom: 8px;
-            opacity: 0.8;
+            opacity: 0.9;
         }
 
         .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 12px;
-            border-radius: 4px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 14px;
+            border-radius: 8px;
             color: white;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 15px;
             transition: 0.3s;
         }
 
@@ -1092,9 +1121,10 @@
             background: var(--eco-green-med);
             color: white;
             border: none;
-            padding: 14px;
-            border-radius: 4px;
-            font-weight: 600;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
             cursor: pointer;
             transition: 0.3s;
         }
@@ -1159,8 +1189,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 12px;
-            opacity: 0.6;
+            font-size: 13px;
+            opacity: 0.7;
         }
 
         /* --- Mobile --- */
