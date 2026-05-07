@@ -54,7 +54,7 @@ h1, h2, h3, .serif {
 
 section {
     padding: var(--section-pad) 0;
-    min-height: auto; /* Remove forced 100vh for better flow */
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -196,8 +196,7 @@ nav.scrolled {
 #hero {
     background: radial-gradient(circle at 70% 50%, rgba(45, 106, 79, 0.05) 0%, transparent 50%), var(--p-white);
     color: var(--p-text);
-    padding: 160px 0 100px; /* Extra padding for navbar */
-    overflow: visible;
+    padding: 160px 0 100px;
 }
 
 .hero-grid-container {
@@ -350,40 +349,9 @@ nav.scrolled {
     justify-content: center;
 }
 
-.molecular-container::after {
-    content: '';
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    border: 1px dashed rgba(45, 106, 79, 0.1);
-    border-radius: 50%;
-}
-
 @keyframes rotateSlow {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
-}
-
-.floating-element {
-    position: absolute;
-    animation: float 4s ease-in-out infinite;
-}
-
-.element-engaco {
-    top: 20%;
-    right: 0;
-    animation-delay: 0.5s;
-}
-
-.element-serum {
-    bottom: 20%;
-    left: 0;
-    animation-delay: 1.5s;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
 }
 
 /* --- About --- */
@@ -485,9 +453,9 @@ nav.scrolled {
     letter-spacing: 0.1em;
 }
 
-/* --- Solution --- */
-#solution {
-    background: #F0F2F0; /* Very light sage tint */
+/* --- Solutions --- */
+#solutions {
+    background: #F0F2F0;
 }
 
 .solution-header {
@@ -504,19 +472,6 @@ nav.scrolled {
     background: linear-gradient(to right, var(--eco-green), var(--p-wine));
     margin: 32px auto;
     border-radius: 10px;
-}
-
-.raw-material-bar {
-    background: var(--p-forest);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 12px;
-    margin-bottom: 64px;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    box-shadow: var(--shadow-md);
 }
 
 .solution-grid {
@@ -559,12 +514,10 @@ nav.scrolled {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    position: relative;
 }
 
 .step {
     text-align: center;
-    position: relative;
 }
 
 .step-num {
@@ -578,7 +531,6 @@ nav.scrolled {
     font-size: 14px;
     font-weight: 700;
     color: white;
-    transition: var(--transition);
 }
 
 .green .step-num { background: var(--eco-green); }
@@ -590,7 +542,6 @@ nav.scrolled {
     margin-bottom: 6px;
     text-transform: uppercase;
     color: var(--p-text);
-    letter-spacing: 0.05em;
 }
 
 .step-text {
@@ -614,10 +565,6 @@ nav.scrolled {
     border-bottom: none;
 }
 
-.attr-table tr b {
-    color: var(--p-forest);
-}
-
 .pills-container {
     display: flex;
     flex-wrap: wrap;
@@ -637,8 +584,8 @@ nav.scrolled {
 .green .mini-pill { background: rgba(45, 106, 79, 0.1); color: var(--eco-green); }
 .bordo .mini-pill { background: rgba(88, 24, 69, 0.1); color: var(--p-wine); }
 
-/* --- Market --- */
-#market {
+/* --- Impact --- */
+#impact {
     background: linear-gradient(135deg, var(--p-forest), #0B1D15);
     color: white;
 }
@@ -672,50 +619,6 @@ nav.scrolled {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 600;
-}
-
-.market-tables {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 80px;
-}
-
-.market-table-container {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.market-table-container h4 {
-    padding: 24px 32px;
-    font-weight: 600;
-    font-size: 18px;
-    color: white;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-.green-head { background: rgba(45, 106, 79, 0.3); }
-.bordo-head { background: rgba(88, 24, 69, 0.3); }
-
-.m-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-}
-
-.m-table th, .m-table td {
-    padding: 16px 32px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.m-table th {
-    font-weight: 700;
-    color: var(--p-sage);
-    text-transform: uppercase;
-    font-size: 11px;
 }
 
 .adv-grid {
@@ -754,141 +657,7 @@ nav.scrolled {
     line-height: 1.6;
 }
 
-/* --- Business --- */
-#business {
-    background: var(--p-white);
-}
-
-.revenue-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin-bottom: 80px;
-}
-
-.rev-card {
-    background: white;
-    padding: 40px 32px;
-    border-radius: 20px;
-    box-shadow: var(--shadow-md);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    transition: var(--transition);
-    border: 1px solid rgba(0, 0, 0, 0.03);
-}
-
-.rev-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--eco-green);
-}
-
-.rev-circle {
-    width: 56px;
-    height: 56px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 20px;
-    flex-shrink: 0;
-}
-
-.green-rev .rev-circle { background: var(--p-forest); }
-.bordo-rev .rev-circle { background: var(--p-wine); }
-
-.rev-info h6 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--p-forest);
-    font-family: 'Cormorant Garamond', serif;
-}
-
-.rev-price {
-    font-size: 15px;
-    color: var(--p-text-light);
-    font-weight: 500;
-}
-
-.margin-pill {
-    display: inline-block;
-    padding: 6px 14px;
-    background: rgba(45, 106, 79, 0.1);
-    color: var(--eco-green);
-    border-radius: 50px;
-    font-size: 11px;
-    font-weight: 700;
-    margin-top: 16px;
-    text-transform: uppercase;
-}
-
-.bordo-rev .margin-pill {
-    background: rgba(88, 24, 69, 0.1);
-    color: var(--p-wine);
-}
-
-.kpi-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 24px;
-    margin-bottom: 80px;
-}
-
-.kpi-box {
-    background: white;
-    padding: 32px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid rgba(0, 0, 0, 0.03);
-}
-
-.kpi-val {
-    display: block;
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--p-forest);
-    margin-bottom: 8px;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-.kpi-label {
-    font-size: 11px;
-    color: var(--p-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 600;
-}
-
-.seed-round-card {
-    background: linear-gradient(135deg, var(--p-forest), #2D6A4F);
-    color: white;
-    padding: 60px;
-    border-radius: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: var(--shadow-lg);
-}
-
-.seed-info h4 {
-    font-size: 36px;
-    margin-bottom: 12px;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-.seed-details {
-    font-size: 16px;
-    opacity: 0.9;
-    letter-spacing: 0.02em;
-}
-
-/* --- Team --- */
+/* --- Team & Roadmap --- */
 #team {
     background: #F8F9FA;
 }
@@ -1009,58 +778,6 @@ nav.scrolled {
     color: var(--p-text-light);
     line-height: 1.6;
 }
-
-.impact-ip-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
-    margin-top: 100px;
-    align-items: center;
-}
-
-.impact-kpis {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-
-.impact-box {
-    background: white;
-    padding: 32px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: var(--shadow-sm);
-}
-
-.impact-val {
-    display: block;
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--eco-green);
-    font-family: 'Cormorant Garamond', serif;
-}
-
-.impact-label {
-    font-size: 11px;
-    color: var(--p-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.ip-portfolio {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-
-.ip-card {
-    padding: 32px;
-    border-radius: 16px;
-    font-size: 14px;
-}
-
-.ip-card.green { background: rgba(45, 106, 79, 0.05); color: var(--p-forest); }
-.ip-card.bordo { background: rgba(88, 24, 69, 0.05); color: var(--p-wine); }
 
 /* --- Contact --- */
 #contact {
