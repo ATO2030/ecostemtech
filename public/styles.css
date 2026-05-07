@@ -1,12 +1,12 @@
 :root {
     /* Premium Color Palette - Nature & Science */
-    --p-forest:      #1B4332; /* Deep Forest Green */
+    --p-forest:      #163828; /* Deep Forest Green (darker for contrast) */
     --p-sage:        #D8E2DC; /* Soft Sage Background */
     --p-wine:        #581845; /* Premium Wine Bordo */
     --p-gold:        #B89B72; /* Subtle Gold accent */
-    --p-white:       #F8F9FA; /* Clean Science White */
-    --p-text:        #212529; /* Dark Gray Text */
-    --p-text-light:  #6C757D; /* Muted Text */
+    --p-white:       #FDFBF7; /* Warm Luxurious Off-White */
+    --p-text:        #1A1D1C; /* Darker text for contrast */
+    --p-text-light:  #636D68; /* Muted Text */
     
     /* Functional Colors */
     --eco-green:     #2D6A4F;
@@ -16,14 +16,14 @@
     /* Layout */
     --nav-height: 80px;
     --container-max: 1200px;
-    --section-pad: 120px;
+    --section-pad: 140px; /* Increased whitespace */
     
     /* Effects */
-    --glass: rgba(255, 255, 255, 0.7);
-    --glass-blur: blur(12px);
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --glass: rgba(253, 251, 247, 0.85);
+    --glass-blur: blur(16px);
+    --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.03); /* Softer, wider shadows */
+    --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 24px 40px rgba(0, 0, 0, 0.05);
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -411,7 +411,7 @@ nav.scrolled {
     background: white;
     padding: 32px;
     border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
 }
@@ -419,7 +419,7 @@ nav.scrolled {
 .info-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-md);
-    border-color: var(--eco-green);
+    border-color: rgba(0, 0, 0, 0.08);
 }
 
 .info-card h4 {
@@ -455,7 +455,7 @@ nav.scrolled {
 
 /* --- Solutions --- */
 #solutions {
-    background: #F0F2F0;
+    background: #F7F9F8; /* Extremely subtle tint */
 }
 
 .solution-header {
@@ -659,7 +659,7 @@ nav.scrolled {
 
 /* --- Team & Roadmap --- */
 #team {
-    background: #F8F9FA;
+    background: var(--p-white);
 }
 
 .team-grid {
