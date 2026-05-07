@@ -48,7 +48,7 @@ h1, h2, h3, .serif {
 }
 
 section {
-    padding: 100px 5%;
+    padding: 100px 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -82,14 +82,34 @@ nav {
     left: 0;
     width: 100%;
     height: var(--nav-height);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
     z-index: 1000;
     transition: 0.4s ease;
     background: white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* Ensure links are centered regardless of logo/button width */
+.logo, .cta-invest-wrapper {
+    flex: 1;
+    display: flex;
+}
+
+.cta-invest-wrapper {
+    justify-content: flex-end;
+}
+
+.nav-links {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
 }
 
 nav.scrolled {
@@ -131,10 +151,6 @@ nav.scrolled {
     letter-spacing: 0.05em;
 }
 
-.nav-links {
-    display: flex;
-    gap: 24px;
-}
 
 .nav-links a {
     text-decoration: none;
@@ -178,11 +194,17 @@ nav.scrolled {
 #hero {
     background-color: var(--eco-bordo-dark);
     color: white;
-    padding: 0 5%;
     overflow: hidden;
+    padding: 0;
+}
+
+.hero-grid-container {
     display: grid;
     grid-template-columns: 58% 42%;
     align-items: center;
+    height: 100%;
+    min-height: calc(100vh - var(--nav-height));
+    padding-top: 40px; /* Offset for the white navbar */
 }
 
 .hero-content {
