@@ -38,7 +38,7 @@ html {
 }
 
 body {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--p-white);
     color: var(--p-text);
     line-height: 1.7;
@@ -47,9 +47,9 @@ body {
 }
 
 h1, h2, h3, .serif {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    letter-spacing: -0.02em;
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
 }
 
 section {
@@ -118,7 +118,7 @@ nav.scrolled {
 }
 
 .logo img {
-    height: 44px;
+    height: 60px;
     width: auto;
 }
 
@@ -128,7 +128,7 @@ nav.scrolled {
 }
 
 .logo-main {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Instrument Serif', serif;
     font-size: 26px;
     font-weight: 600;
     line-height: 1;
@@ -235,7 +235,7 @@ nav.scrolled {
 
 .hero-subtitle {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--p-text-light);
     margin-bottom: 48px;
     max-width: 540px;
@@ -318,7 +318,7 @@ nav.scrolled {
     font-size: 24px;
     color: var(--p-forest);
     margin-bottom: 4px;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Instrument Serif', serif;
 }
 
 .metric-item span {
@@ -391,7 +391,7 @@ nav.scrolled {
 }
 
 .mission-quote {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Instrument Serif', serif;
     font-style: italic;
     font-size: 22px;
     color: var(--p-wine);
@@ -433,9 +433,9 @@ nav.scrolled {
 }
 
 .info-card p {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--p-text-light);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .partner-stripe {
@@ -503,7 +503,7 @@ nav.scrolled {
     display: flex;
     align-items: center;
     gap: 16px;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Instrument Serif', serif;
 }
 
 .green .col-header { background: var(--p-forest); }
@@ -537,7 +537,7 @@ nav.scrolled {
 .bordo .step-num { background: var(--p-wine); }
 
 .step-title {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     margin-bottom: 6px;
     text-transform: uppercase;
@@ -545,9 +545,9 @@ nav.scrolled {
 }
 
 .step-text {
-    font-size: 11px;
+    font-size: 13px;
     color: var(--p-text-light);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .attr-table {
@@ -606,7 +606,7 @@ nav.scrolled {
 }
 
 .metric-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Instrument Serif', serif;
     font-size: 56px;
     line-height: 1;
     margin-bottom: 12px;
@@ -614,7 +614,7 @@ nav.scrolled {
 }
 
 .metric-label {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--p-sage);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -648,7 +648,7 @@ nav.scrolled {
     align-items: center;
     gap: 12px;
     color: white;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Instrument Serif', serif;
 }
 
 .adv-card p {
@@ -695,7 +695,7 @@ nav.scrolled {
     font-size: 24px;
     font-weight: 700;
     color: white;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Instrument Serif', serif;
 }
 
 .avatar.green { background: var(--p-forest); }
@@ -708,7 +708,7 @@ nav.scrolled {
 }
 
 .team-card span {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--p-text-light);
     font-weight: 500;
 }
@@ -793,7 +793,7 @@ nav.scrolled {
 
 .phase-title {
     display: inline-block;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     color: var(--p-text-light);
     text-transform: uppercase;
@@ -817,7 +817,7 @@ nav.scrolled {
     font-weight: 500;
     color: var(--p-forest);
     margin-bottom: 16px;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Instrument Serif', serif;
 }
 
 .phase-content {
@@ -875,7 +875,7 @@ nav.scrolled {
 .contact-info h5 {
     font-size: 24px;
     margin-bottom: 16px;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Instrument Serif', serif;
 }
 
 .contact-col {
