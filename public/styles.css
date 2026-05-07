@@ -729,44 +729,91 @@ nav.scrolled {
 .roadmap-timeline::before {
     content: '';
     position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: rgba(45, 106, 79, 0.2);
+    top: 32px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(45, 106, 79, 0.1), var(--eco-green), rgba(88, 24, 69, 0.1));
     z-index: 1;
 }
 
-.phase {
+.phase-card {
     position: relative;
     z-index: 2;
+    background: white;
+    padding: 40px 32px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.03);
     text-align: center;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
 }
 
-.phase::after {
-    content: '';
-    width: 12px;
-    height: 12px;
-    background: white;
-    border: 3px solid var(--eco-green);
+.phase-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(45, 106, 79, 0.2);
+}
+
+.phase-icon {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
-    display: block;
-    margin: 41px auto 32px; /* Adjusted to sit on the line */
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    border: 2px solid white;
+    z-index: 3;
+    transition: var(--transition);
+}
+
+.phase-card:hover .phase-icon {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.phase-icon.green {
+    color: var(--eco-green);
+    border-color: var(--p-sage);
+}
+
+.phase-icon.bordo {
+    color: var(--p-wine);
+    border-color: rgba(88, 24, 69, 0.1);
 }
 
 .phase-title {
-    display: block;
+    display: inline-block;
     font-size: 11px;
     font-weight: 700;
-    color: var(--eco-green);
+    color: var(--p-text-light);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    margin-top: 16px;
+    background: var(--p-sage);
+    padding: 4px 12px;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.phase-card:hover .phase-title {
+    background: rgba(45, 106, 79, 0.1);
+    color: var(--eco-green);
 }
 
 .phase-year {
     display: block;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 500;
     color: var(--p-forest);
     margin-bottom: 16px;
@@ -777,6 +824,39 @@ nav.scrolled {
     font-size: 14px;
     color: var(--p-text-light);
     line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .roadmap-timeline {
+        grid-template-columns: 1fr;
+        gap: 64px;
+    }
+    
+    .roadmap-timeline::before {
+        top: 0;
+        left: 32px;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(45, 106, 79, 0.1), var(--eco-green), rgba(88, 24, 69, 0.1));
+    }
+    
+    .phase-card {
+        margin-top: 0;
+        margin-left: 64px;
+        padding: 32px 24px;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .phase-icon {
+        top: 50%;
+        left: -64px;
+        transform: translateY(-50%);
+    }
+
+    .phase-card:hover .phase-icon {
+        transform: translateY(-50%) scale(1.1);
+    }
 }
 
 /* --- Contact --- */

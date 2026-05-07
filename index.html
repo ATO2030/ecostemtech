@@ -961,6 +961,7 @@
 
         .roadmap-container {
             margin-bottom: 80px;
+            position: relative;
         }
 
         .roadmap-timeline {
@@ -968,60 +969,150 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             position: relative;
-            padding-top: 40px;
         }
 
         .roadmap-timeline::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+            top: 32px;
+            left: 10%;
+            width: 80%;
             height: 2px;
-            background: var(--eco-green-med);
+            background: linear-gradient(to right, rgba(45, 122, 58, 0.1), var(--eco-green-med), rgba(139, 36, 86, 0.1));
+            z-index: 1;
         }
 
-        .phase {
+        .phase-card {
             position: relative;
+            z-index: 2;
+            background: white;
+            padding: 40px 32px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            text-align: center;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 32px;
         }
 
-        .phase::before {
-            content: '';
+        .phase-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: rgba(45, 122, 58, 0.2);
+        }
+
+        .phase-icon {
             position: absolute;
-            top: -7px;
-            left: 0;
-            width: 12px;
-            height: 12px;
-            background: var(--eco-green-med);
+            top: -32px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 64px;
+            height: 64px;
             border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border: 2px solid white;
+            z-index: 3;
+            transition: var(--transition);
+        }
+
+        .phase-card:hover .phase-icon {
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        .phase-icon.green {
+            color: var(--eco-green-med);
+            border-color: var(--eco-green-mint);
+        }
+
+        .phase-icon.bordo {
+            color: var(--eco-bordo);
+            border-color: var(--eco-bordo-light);
         }
 
         .phase-head {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
+            margin-top: 16px;
         }
 
         .phase-title {
-            font-weight: 600;
-            font-size: 16px;
-            display: block;
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--eco-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+            background: var(--eco-green-mint);
+            padding: 4px 12px;
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+
+        .phase-card:hover .phase-title {
+            background: rgba(45, 122, 58, 0.1);
+            color: var(--eco-green-med);
         }
 
         .phase-year {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--eco-green-med);
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--eco-green-dark);
+            font-family: var(--font-display);
+            display: block;
         }
 
         .phase-content {
             font-size: 13px;
             color: var(--eco-text-mid);
             line-height: 1.5;
+            text-align: left;
+            width: 100%;
         }
 
         .phase-content b {
             display: block;
             margin: 12px 0 4px;
             color: var(--eco-green-dark);
+        }
+        
+        @media (max-width: 900px) {
+            .roadmap-timeline {
+                grid-template-columns: 1fr;
+                gap: 64px;
+            }
+            
+            .roadmap-timeline::before {
+                top: 0;
+                left: 32px;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(to bottom, rgba(45, 122, 58, 0.1), var(--eco-green-med), rgba(139, 36, 86, 0.1));
+            }
+            
+            .phase-card {
+                margin-top: 0;
+                margin-left: 64px;
+                padding: 32px 24px;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .phase-icon {
+                top: 50%;
+                left: -64px;
+                transform: translateY(-50%);
+            }
+
+            .phase-card:hover .phase-icon {
+                transform: translateY(-50%) scale(1.1);
+            }
         }
 
         .impact-ip-grid {
@@ -1661,7 +1752,10 @@
 
             <div class="roadmap-container">
                 <div class="roadmap-timeline">
-                    <div class="phase">
+                    <div class="phase-card">
+                        <div class="phase-icon green">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2v2"/><path d="M15 2v2"/><path d="M12 2v2"/><path d="M10 10l-3 8a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l-3-8V4h-4v6z"/><path d="M7 16h10"/></svg>
+                        </div>
                         <div class="phase-head">
                             <span class="phase-title">PHASE 1</span>
                             <span class="phase-year">Year 1 · Portugal</span>
@@ -1675,7 +1769,10 @@
                             PRR · EIC Applications
                         </div>
                     </div>
-                    <div class="phase">
+                    <div class="phase-card">
+                        <div class="phase-icon green">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </div>
                         <div class="phase-head">
                             <span class="phase-title">PHASE 2</span>
                             <span class="phase-year">Years 2–3 · S. Europe</span>
@@ -1689,7 +1786,10 @@
                             COSMOS cert. · B2B platform
                         </div>
                     </div>
-                    <div class="phase">
+                    <div class="phase-card">
+                        <div class="phase-icon bordo">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
                         <div class="phase-head">
                             <span class="phase-title">PHASE 3</span>
                             <span class="phase-year">Years 4–5 · EU Scale-up</span>
