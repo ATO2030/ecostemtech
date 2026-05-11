@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoStemTech — Where waste becomes value</title>
-    <meta name="description" content="EcoStemTech — Where waste becomes value. Sustainable solutions from grape stems for wine aging and cosmetic ingredients. ecostemtech.com">
-    
+    <meta name="description"
+        content="EcoStemTech — Where waste becomes value. Sustainable solutions from grape stems for wine aging and cosmetic ingredients. Science-based project (UTAD/CITAB). ecostemtech.com">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
             /* Cores principais */
-            --eco-green-dark:    #1F5C2E;
-            --eco-green-med:     #2D7A3A;
-            --eco-green-light:   #4A9B5C;
-            --eco-green-pale:    #E8F5EC;
-            --eco-green-mint:    #D4EDE0;
+            --eco-green-dark: #1F5C2E;
+            --eco-green-med: #2D7A3A;
+            --eco-green-light: #4A9B5C;
+            --eco-green-pale: #E8F5EC;
+            --eco-green-mint: #D4EDE0;
 
-            --eco-bordo:         #6B1D47;
-            --eco-bordo-dark:    #4A1040;
-            --eco-bordo-light:   #F2E0EB;
-            --eco-bordo-mid:     #8B2456;
+            --eco-bordo: #6B1D47;
+            --eco-bordo-dark: #4A1040;
+            --eco-bordo-light: #F2E0EB;
+            --eco-bordo-mid: #8B2456;
 
-            --eco-beige:         #FDFBF7; /* Warm Luxurious Off-White */
-            --eco-beige-warm:    #F7F5EE;
-            --eco-cream:         #FFFCF8;
+            --eco-beige: #FDFBF7;
+            /* Warm Luxurious Off-White */
+            --eco-beige-warm: #F7F5EE;
+            --eco-cream: #FFFCF8;
 
-            --eco-text:          #1A1A2A;
-            --eco-text-mid:      #3D3D4A;
-            --eco-text-muted:    #6B6B7A;
-            --eco-white:         #FFFFFF;
+            --eco-text: #1A1A2A;
+            --eco-text-mid: #3D3D4A;
+            --eco-text-muted: #6B6B7A;
+            --eco-white: #FFFFFF;
 
-            --font-display:      'Instrument Serif', serif;
-            --font-body:         'Plus Jakarta Sans', sans-serif;
+            --font-display: 'Instrument Serif', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
 
-            --glass-bg:          rgba(255, 255, 255, 0.03);
-            --glass-border:      rgba(255, 255, 255, 0.1);
-            --glass-shadow:      0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
             --transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
             --nav-height: 80px;
@@ -64,7 +69,10 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, .serif {
+        h1,
+        h2,
+        h3,
+        .serif {
             font-family: var(--font-display);
             font-weight: 400;
             letter-spacing: -0.01em;
@@ -90,8 +98,8 @@
         .reveal {
             opacity: 0;
             transform: translateY(40px);
-            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
-                        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .reveal.active {
@@ -102,8 +110,8 @@
         .stagger {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .stagger.active {
@@ -199,7 +207,8 @@
             letter-spacing: 0.02em;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             opacity: 1;
             color: var(--eco-green-light);
         }
@@ -359,8 +368,13 @@
         }
 
         @keyframes rotateSlow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .floating-element {
@@ -381,8 +395,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         /* --- About --- */
@@ -443,18 +464,23 @@
             padding: 28px;
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
             transition: var(--transition);
         }
 
         .info-card:hover {
             transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
             background: white;
         }
 
-        .info-card.green { border-left-color: var(--eco-green-med); }
-        .info-card.bordo { border-left-color: var(--eco-bordo); }
+        .info-card.green {
+            border-left-color: var(--eco-green-med);
+        }
+
+        .info-card.bordo {
+            border-left-color: var(--eco-bordo);
+        }
 
         .info-card h4 {
             display: flex;
@@ -531,12 +557,19 @@
             display: flex;
             flex-direction: column;
             border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
             transition: var(--transition);
         }
 
-        .solution-column.green { border-top-color: var(--eco-green-dark); background: var(--eco-green-pale); }
-        .solution-column.bordo { border-top-color: var(--eco-bordo); background: var(--eco-bordo-light); }
+        .solution-column.green {
+            border-top-color: var(--eco-green-dark);
+            background: var(--eco-green-pale);
+        }
+
+        .solution-column.bordo {
+            border-top-color: var(--eco-bordo);
+            background: var(--eco-bordo-light);
+        }
 
         .col-header {
             padding: 14px 20px;
@@ -547,15 +580,20 @@
             gap: 10px;
         }
 
-        .green .col-header { background: var(--eco-green-dark); }
-        .bordo .col-header { background: var(--eco-bordo); }
+        .green .col-header {
+            background: var(--eco-green-dark);
+        }
+
+        .bordo .col-header {
+            background: var(--eco-bordo);
+        }
 
         .pipeline {
             padding: 32px 20px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .step {
@@ -576,8 +614,13 @@
             transition: 0.3s;
         }
 
-        .green .step-num { background: var(--eco-green-med); }
-        .bordo .step-num { background: var(--eco-bordo); }
+        .green .step-num {
+            background: var(--eco-green-med);
+        }
+
+        .bordo .step-num {
+            background: var(--eco-bordo);
+        }
 
         .step:hover .step-num {
             transform: scale(1.12);
@@ -598,7 +641,8 @@
         }
 
         .pipeline-arrow {
-            display: none; /* Adjust for desktop if needed, but grid works well */
+            display: none;
+            /* Adjust for desktop if needed, but grid works well */
         }
 
         .attr-table {
@@ -609,15 +653,20 @@
 
         .attr-table td {
             padding: 12px 20px;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .attr-table tr:nth-child(even) {
             background: rgba(255, 255, 255, 0.5);
         }
 
-        .green .attr-table tr:nth-child(odd) { background: var(--eco-green-mint); }
-        .bordo .attr-table tr:nth-child(odd) { background: var(--eco-bordo-light); }
+        .green .attr-table tr:nth-child(odd) {
+            background: var(--eco-green-mint);
+        }
+
+        .bordo .attr-table tr:nth-child(odd) {
+            background: var(--eco-bordo-light);
+        }
 
         .pills-container {
             display: flex;
@@ -634,7 +683,10 @@
             letter-spacing: 0.02em;
         }
 
-        .bordo .mini-pill { background: var(--eco-bordo); color: white; }
+        .bordo .mini-pill {
+            background: var(--eco-bordo);
+            color: white;
+        }
 
         /* --- Market --- */
         #market {
@@ -685,7 +737,7 @@
         }
 
         .market-table-container {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             overflow: hidden;
         }
@@ -696,8 +748,13 @@
             color: white;
         }
 
-        .green-head { background: var(--eco-green-dark); }
-        .bordo-head { background: var(--eco-bordo); }
+        .green-head {
+            background: var(--eco-green-dark);
+        }
+
+        .bordo-head {
+            background: var(--eco-bordo);
+        }
 
         .m-table {
             width: 100%;
@@ -705,10 +762,11 @@
             font-size: 13px;
         }
 
-        .m-table th, .m-table td {
+        .m-table th,
+        .m-table td {
             padding: 12px 24px;
             text-align: left;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .adv-grid {
@@ -718,17 +776,17 @@
         }
 
         .adv-card {
-            background: rgba(255,255,255,0.04);
+            background: rgba(255, 255, 255, 0.04);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 32px;
             border-radius: 16px;
             transition: var(--transition);
         }
 
         .adv-card:hover {
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
             transform: translateY(-12px);
             border-color: var(--eco-green-light);
         }
@@ -763,7 +821,7 @@
             background: white;
             padding: 24px;
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
             display: flex;
             align-items: center;
             gap: 16px;
@@ -786,8 +844,13 @@
             flex-shrink: 0;
         }
 
-        .green-rev .rev-circle { background: var(--eco-green-med); }
-        .bordo-rev .rev-circle { background: var(--eco-bordo); }
+        .green-rev .rev-circle {
+            background: var(--eco-green-med);
+        }
+
+        .bordo-rev .rev-circle {
+            background: var(--eco-bordo);
+        }
 
         .rev-info h6 {
             font-size: 16px;
@@ -820,7 +883,7 @@
             background: white;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
             margin-bottom: 60px;
         }
 
@@ -837,13 +900,15 @@
             border-collapse: collapse;
         }
 
-        .f-table th, .f-table td {
+        .f-table th,
+        .f-table td {
             padding: 14px 24px;
             text-align: right;
             border-bottom: 1px solid var(--eco-beige);
         }
 
-        .f-table th:first-child, .f-table td:first-child {
+        .f-table th:first-child,
+        .f-table td:first-child {
             text-align: left;
         }
 
@@ -936,8 +1001,15 @@
             font-weight: 400;
         }
 
-        .avatar.green { background: var(--eco-green-pale); color: var(--eco-green-dark); }
-        .avatar.bordo { background: var(--eco-bordo-light); color: var(--eco-bordo); }
+        .avatar.green {
+            background: var(--eco-green-pale);
+            color: var(--eco-green-dark);
+        }
+
+        .avatar.bordo {
+            background: var(--eco-bordo-light);
+            color: var(--eco-bordo);
+        }
 
         .team-card h5 {
             font-size: 18px;
@@ -1081,13 +1153,13 @@
             margin: 12px 0 4px;
             color: var(--eco-green-dark);
         }
-        
+
         @media (max-width: 900px) {
             .roadmap-timeline {
                 grid-template-columns: 1fr;
                 gap: 64px;
             }
-            
+
             .roadmap-timeline::before {
                 top: 0;
                 left: 32px;
@@ -1095,7 +1167,7 @@
                 height: 100%;
                 background: linear-gradient(to bottom, rgba(45, 122, 58, 0.1), var(--eco-green-med), rgba(139, 36, 86, 0.1));
             }
-            
+
             .phase-card {
                 margin-top: 0;
                 margin-left: 64px;
@@ -1103,7 +1175,7 @@
                 align-items: flex-start;
                 text-align: left;
             }
-            
+
             .phase-icon {
                 top: 50%;
                 left: -64px;
@@ -1132,7 +1204,7 @@
             padding: 20px;
             border-radius: 4px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
         }
 
         .impact-val {
@@ -1181,9 +1253,20 @@
             font-weight: 500;
         }
 
-        .ip-card.green { background: var(--eco-green-pale); border: 1px solid var(--eco-green-med); }
-        .ip-card.bordo { background: var(--eco-bordo-light); border: 1px solid var(--eco-bordo); }
-        .ip-card.gray { background: #F0F0F0; border: 1px solid #CCC; }
+        .ip-card.green {
+            background: var(--eco-green-pale);
+            border: 1px solid var(--eco-green-med);
+        }
+
+        .ip-card.bordo {
+            background: var(--eco-bordo-light);
+            border: 1px solid var(--eco-bordo);
+        }
+
+        .ip-card.gray {
+            background: #F0F0F0;
+            border: 1px solid #CCC;
+        }
 
         /* --- Contact --- */
         #contact {
@@ -1220,10 +1303,10 @@
         }
 
         .contact-form {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             padding: 40px;
             border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .form-group {
@@ -1238,10 +1321,12 @@
             opacity: 0.9;
         }
 
-        .form-group input, .form-group select, .form-group textarea {
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 14px;
             border-radius: 8px;
             color: white;
@@ -1250,10 +1335,12 @@
             transition: 0.3s;
         }
 
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: var(--eco-green-light);
-            background: rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .form-group select option {
@@ -1294,7 +1381,7 @@
             background: var(--eco-bordo-dark);
             color: white;
             padding: 60px 5% 40px;
-            border-top: 1px solid rgba(255,255,255,0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .footer-content {
@@ -1307,7 +1394,9 @@
             margin: 0 auto;
         }
 
-        .footer-logo .logo-main { font-size: 28px; }
+        .footer-logo .logo-main {
+            font-size: 28px;
+        }
 
         .footer-links {
             display: flex;
@@ -1323,13 +1412,15 @@
             transition: 0.3s;
         }
 
-        .footer-links a:hover { opacity: 1; }
+        .footer-links a:hover {
+            opacity: 1;
+        }
 
         .footer-bottom {
             max-width: 1200px;
             margin: 40px auto 0;
             padding-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1342,11 +1433,13 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+
             .footer-content {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
+
             .footer-bottom {
                 flex-direction: column;
                 gap: 20px;
@@ -1355,6 +1448,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <nav id="navbar">
@@ -1374,14 +1468,18 @@
 
     <section id="hero">
         <div class="bg-mesh">
-            <div class="mesh-circle" style="width: 600px; height: 600px; background: var(--eco-green-med); top: -200px; right: -100px;"></div>
-            <div class="mesh-circle" style="width: 500px; height: 500px; background: var(--eco-bordo-mid); bottom: -100px; left: -100px;"></div>
+            <div class="mesh-circle"
+                style="width: 600px; height: 600px; background: var(--eco-green-med); top: -200px; right: -100px;">
+            </div>
+            <div class="mesh-circle"
+                style="width: 500px; height: 500px; background: var(--eco-bordo-mid); bottom: -100px; left: -100px;">
+            </div>
         </div>
         <div class="hero-content reveal">
-            <span class="pill">UTAD · CITAB · Patente EP 3 835 401 A1</span>
+            <span class="pill">CITAB · Patente EP 3 835 401 A1</span>
             <h1 class="hero-title">Where waste<br>becomes value.</h1>
             <p class="hero-subtitle">Sustainable solutions from grape stems for better wine and better beauty.</p>
-            
+
             <div class="hero-features">
                 <div class="feature-item">
                     <span>🍷</span>
@@ -1437,36 +1535,50 @@
 
     <section id="about">
         <div class="bg-mesh">
-            <div class="mesh-circle" style="width: 400px; height: 400px; background: var(--eco-bordo-light); top: 10%; left: -50px; opacity: 0.1;"></div>
+            <div class="mesh-circle"
+                style="width: 400px; height: 400px; background: var(--eco-bordo-light); top: 10%; left: -50px; opacity: 0.1;">
+            </div>
         </div>
         <div class="container reveal">
             <div class="about-grid">
                 <div class="about-text">
                     <span class="tag">NATURE. SCIENCE. SUSTAINABILITY.</span>
                     <h2 class="section-title">"Transforming the unseen value of winery by-products"</h2>
-                    <p>EcoStemTech originated from research at the Universidade de Trás-os-Montes e Alto Douro (UTAD) and CITAB, created to valorise grape stems — a winery by-product representing 25% of all viticultural residues in Europe — into high-value solutions for two growing industries.</p>
-                    <p>Our patented toasting process (EP 3 835 401 A1, valid in 38 European countries) transforms grape stems into a natural oenological ingredient that enhances wine complexity. Our green extraction process converts the same stems into certified bioactive compounds for cosmetic formulations.</p>
+                    <p>EcoStemTech is a scientific project (future UTAD spin-off) of the Universidade de Trás-os-Montes
+                        e Alto Douro (UTAD) and CITAB, created to valorise grape stems — a winery by-product
+                        representing 25% of all viticultural residues in Europe — into high-value solutions for two
+                        growing industries.</p>
+                    <p>Our patented toasting process (EP 3 835 401 A1, valid in 38 European countries) transforms grape
+                        stems into a natural oenological ingredient that enhances wine complexity. Our green extraction
+                        process converts the same stems into certified bioactive compounds for cosmetic formulations.
+                    </p>
                     <div class="mission-quote">
-                        "To transform grape stems into high-value bioactive ingredients through science, innovation and sustainability — delivering tailored solutions for the cosmetic, nutraceutical and wine industries."
+                        "To transform grape stems into high-value bioactive ingredients through science, innovation and
+                        sustainability — delivering tailored solutions for the cosmetic, nutraceutical and wine
+                        industries."
                     </div>
                 </div>
 
                 <div class="about-cards">
                     <div class="info-card green stagger">
                         <h4>🌱 The Problem</h4>
-                        <p>2 million tonnes of winery residues annually in Europe. Grape stems — 25% of that total — have near-zero commercial value despite being rich in bioactive compounds.</p>
+                        <p>2 million tonnes of winery residues annually in Europe. Grape stems — 25% of that total —
+                            have near-zero commercial value despite being rich in bioactive compounds.</p>
                     </div>
                     <div class="info-card green stagger">
                         <h4>🔬 Our Patented Process</h4>
-                        <p>A controlled toasting method (EP 3 835 401 A1) and a green extraction process that unlock the full potential of grape stems for two distinct markets.</p>
+                        <p>A controlled toasting method (EP 3 835 401 A1) and a green extraction process that unlock the
+                            full potential of grape stems for two distinct markets.</p>
                     </div>
                     <div class="info-card bordo stagger">
                         <h4>🍷 Line 1 — Viticulture</h4>
-                        <p>Toasted grape stems as a natural, eco-friendly alternative to oak wood in wine aging. 60% more cost-effective than French oak barrels.</p>
+                        <p>Toasted grape stems as a natural, eco-friendly alternative to oak wood in wine aging. 60%
+                            more cost-effective than French oak barrels.</p>
                     </div>
                     <div class="info-card bordo stagger">
                         <h4>✦ Line 2 — Cosmetics</h4>
-                        <p>Standardised bioactive extracts (polyphenols, resveratrol, stilbenes, tannins) for clean beauty formulations. COSMOS certification target.</p>
+                        <p>Standardised bioactive extracts (polyphenols, resveratrol, stilbenes, tannins) for clean
+                            beauty formulations. COSMOS certification target.</p>
                     </div>
                 </div>
             </div>
@@ -1537,11 +1649,26 @@
                         </div>
                     </div>
                     <table class="attr-table">
-                        <tr><td><b>Product</b></td><td>Toasted stems (light/medium/intense)</td></tr>
-                        <tr><td><b>Protected by</b></td><td>Patent EP 3 835 401 A1</td></tr>
-                        <tr><td><b>Key result</b></td><td>Vanillin 19.99 mg/mL · Brettanomyces-free</td></tr>
-                        <tr><td><b>Price</b></td><td>€50–70/kg · €0.50–0.70/L treated</td></tr>
-                        <tr><td><b>vs. Oak</b></td><td><b>60% more cost-effective</b> than barrels</td></tr>
+                        <tr>
+                            <td><b>Product</b></td>
+                            <td>Toasted stems (light/medium/intense)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Protected by</b></td>
+                            <td>Patent EP 3 835 401 A1</td>
+                        </tr>
+                        <tr>
+                            <td><b>Key result</b></td>
+                            <td>Vanillin 19.99 mg/mL · Brettanomyces-free</td>
+                        </tr>
+                        <tr>
+                            <td><b>Price</b></td>
+                            <td>€50–70/kg · €0.50–0.70/L treated</td>
+                        </tr>
+                        <tr>
+                            <td><b>vs. Oak</b></td>
+                            <td><b>60% more cost-effective</b> than barrels</td>
+                        </tr>
                     </table>
                 </div>
 
@@ -1590,11 +1717,26 @@
                         <span class="mini-pill">Anti-inflammatory</span>
                     </div>
                     <table class="attr-table">
-                        <tr><td><b>Product</b></td><td>Standardised bioactive extracts</td></tr>
-                        <tr><td><b>Process</b></td><td>Green extraction · HPLC-MS</td></tr>
-                        <tr><td><b>Market</b></td><td>Clean beauty EU CAGR 13.8%</td></tr>
-                        <tr><td><b>Price</b></td><td>€180–350/100g standardised</td></tr>
-                        <tr><td><b>Actions</b></td><td>Antioxidant · Anti-tyrosinase</td></tr>
+                        <tr>
+                            <td><b>Product</b></td>
+                            <td>Standardised bioactive extracts</td>
+                        </tr>
+                        <tr>
+                            <td><b>Process</b></td>
+                            <td>Green extraction · HPLC-MS</td>
+                        </tr>
+                        <tr>
+                            <td><b>Market</b></td>
+                            <td>Clean beauty EU CAGR 13.8%</td>
+                        </tr>
+                        <tr>
+                            <td><b>Price</b></td>
+                            <td>€180–350/100g standardised</td>
+                        </tr>
+                        <tr>
+                            <td><b>Actions</b></td>
+                            <td>Antioxidant · Anti-tyrosinase</td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -1603,13 +1745,18 @@
 
     <section id="market">
         <div class="bg-mesh">
-            <div class="mesh-circle" style="width: 700px; height: 700px; background: var(--eco-green-dark); top: -100px; right: -200px; opacity: 0.2;"></div>
-            <div class="mesh-circle" style="width: 600px; height: 600px; background: var(--eco-bordo-dark); bottom: -200px; left: -100px; opacity: 0.2;"></div>
+            <div class="mesh-circle"
+                style="width: 700px; height: 700px; background: var(--eco-green-dark); top: -100px; right: -200px; opacity: 0.2;">
+            </div>
+            <div class="mesh-circle"
+                style="width: 600px; height: 600px; background: var(--eco-bordo-dark); bottom: -200px; left: -100px; opacity: 0.2;">
+            </div>
         </div>
         <div class="container reveal">
             <div class="solution-header">
                 <h2 class="section-title" style="color: white;">"A structural problem. Two growing markets."</h2>
-                <p style="color: var(--eco-green-light); font-size: 18px;">The only European company valorising grape stems for viticulture AND cosmetics simultaneously.</p>
+                <p style="color: var(--eco-green-light); font-size: 18px;">The only European company valorising grape
+                    stems for viticulture AND cosmetics simultaneously.</p>
             </div>
 
             <div class="market-metrics">
@@ -1630,15 +1777,18 @@
             <div class="advantage-grid">
                 <div class="adv-card stagger">
                     <h5>Economic</h5>
-                    <p>60% more cost-effective than French oak barrels. Low acquisition cost of raw material (winemaking residues).</p>
+                    <p>60% more cost-effective than French oak barrels. Low acquisition cost of raw material (winemaking
+                        residues).</p>
                 </div>
                 <div class="adv-card stagger">
                     <h5>Technical</h5>
-                    <p>Vanillin levels at 19.99 mg/mL. Standardised bioactive extracts with high purity (HPLC-MS verified).</p>
+                    <p>Vanillin levels at 19.99 mg/mL. Standardised bioactive extracts with high purity (HPLC-MS
+                        verified).</p>
                 </div>
                 <div class="adv-card stagger">
                     <h5>Environmental</h5>
-                    <p>Zero-waste approach. Reduction of winery carbon footprint by valorising residues. Green extraction solvents.</p>
+                    <p>Zero-waste approach. Reduction of winery carbon footprint by valorising residues. Green
+                        extraction solvents.</p>
                 </div>
             </div>
         </div>
@@ -1646,7 +1796,9 @@
 
     <section id="business">
         <div class="bg-mesh">
-            <div class="mesh-circle" style="width: 500px; height: 500px; background: var(--eco-green-light); bottom: -100px; right: -100px; opacity: 0.1;"></div>
+            <div class="mesh-circle"
+                style="width: 500px; height: 500px; background: var(--eco-green-light); bottom: -100px; right: -100px; opacity: 0.1;">
+            </div>
         </div>
         <div class="container reveal">
             <div class="solution-header">
@@ -1659,17 +1811,20 @@
                 <div class="business-card stagger">
                     <div class="biz-icon">📦</div>
                     <div class="biz-title">B2B Product Sales</div>
-                    <div class="biz-text">Direct sale of toasted stems to wineries and bioactive extracts to cosmetic laboratories and ingredient distributors.</div>
+                    <div class="biz-text">Direct sale of toasted stems to wineries and bioactive extracts to cosmetic
+                        laboratories and ingredient distributors.</div>
                 </div>
                 <div class="business-card stagger">
                     <div class="biz-icon">📜</div>
                     <div class="biz-title">Licensing</div>
-                    <div class="biz-text">Licensing of patented toasting technology and proprietary extraction methods to large-scale winery cooperatives.</div>
+                    <div class="biz-text">Licensing of patented toasting technology and proprietary extraction methods
+                        to large-scale winery cooperatives.</div>
                 </div>
                 <div class="business-card stagger">
                     <div class="biz-icon">🤝</div>
                     <div class="biz-title">Joint Ventures</div>
-                    <div class="biz-text">Co-development of specific cosmetic lines with established luxury beauty brands seeking sustainable active ingredients.</div>
+                    <div class="biz-text">Co-development of specific cosmetic lines with established luxury beauty
+                        brands seeking sustainable active ingredients.</div>
                 </div>
             </div>
 
@@ -1677,27 +1832,96 @@
                 <div class="f-table-head">INCOME STATEMENT (€ '000)</div>
                 <table class="f-table">
                     <thead>
-                        <tr><th></th><th>Year 1</th><th>Year 2</th><th>Year 3</th><th>Year 5</th></tr>
+                        <tr>
+                            <th></th>
+                            <th>Year 1</th>
+                            <th>Year 2</th>
+                            <th>Year 3</th>
+                            <th>Year 5</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Revenue Line 1</td><td>82</td><td>410</td><td>840</td><td>5,200</td></tr>
-                        <tr><td>Revenue Line 2</td><td>55</td><td>280</td><td>780</td><td>3,600</td></tr>
-                        <tr><td>Services Revenue</td><td>30</td><td>90</td><td>160</td><td>700</td></tr>
-                        <tr class="total-row"><td>TOTAL REVENUE</td><td>167</td><td>780</td><td>1,780</td><td>9,500</td></tr>
-                        <tr><td>Cost of Goods Sold</td><td class="neg-val">(55)</td><td class="neg-val">(218)</td><td class="neg-val">(463)</td><td class="neg-val">(1,995)</td></tr>
-                        <tr class="total-row"><td>Gross Margin</td><td>112</td><td>562</td><td>1,317</td><td>7,505</td></tr>
-                        <tr><td>OPEX</td><td class="neg-val">(520)</td><td class="neg-val">(650)</td><td class="neg-val">(780)</td><td class="neg-val">(1,850)</td></tr>
-                        <tr class="total-row"><td>EBITDA</td><td class="neg-val">(408)</td><td class="neg-val">(88)</td><td>537</td><td>5,655</td></tr>
+                        <tr>
+                            <td>Revenue Line 1</td>
+                            <td>82</td>
+                            <td>410</td>
+                            <td>840</td>
+                            <td>5,200</td>
+                        </tr>
+                        <tr>
+                            <td>Revenue Line 2</td>
+                            <td>55</td>
+                            <td>280</td>
+                            <td>780</td>
+                            <td>3,600</td>
+                        </tr>
+                        <tr>
+                            <td>Services Revenue</td>
+                            <td>30</td>
+                            <td>90</td>
+                            <td>160</td>
+                            <td>700</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>TOTAL REVENUE</td>
+                            <td>167</td>
+                            <td>780</td>
+                            <td>1,780</td>
+                            <td>9,500</td>
+                        </tr>
+                        <tr>
+                            <td>Cost of Goods Sold</td>
+                            <td class="neg-val">(55)</td>
+                            <td class="neg-val">(218)</td>
+                            <td class="neg-val">(463)</td>
+                            <td class="neg-val">(1,995)</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>Gross Margin</td>
+                            <td>112</td>
+                            <td>562</td>
+                            <td>1,317</td>
+                            <td>7,505</td>
+                        </tr>
+                        <tr>
+                            <td>OPEX</td>
+                            <td class="neg-val">(520)</td>
+                            <td class="neg-val">(650)</td>
+                            <td class="neg-val">(780)</td>
+                            <td class="neg-val">(1,850)</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>EBITDA</td>
+                            <td class="neg-val">(408)</td>
+                            <td class="neg-val">(88)</td>
+                            <td>537</td>
+                            <td>5,655</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
 
             <div class="kpi-row">
-                <div class="kpi-box"><div class="kpi-val">€ 800K</div><div class="kpi-label">Seed Round</div></div>
-                <div class="kpi-box"><div class="kpi-val">€ 1.78M</div><div class="kpi-label">Year 3 Revenue</div></div>
-                <div class="kpi-box"><div class="kpi-val">€ 9.5M</div><div class="kpi-label">Year 5 Revenue</div></div>
-                <div class="kpi-box"><div class="kpi-val">30–38%</div><div class="kpi-label">IRR (5 years)</div></div>
-                <div class="kpi-box"><div class="kpi-val">5–8×</div><div class="kpi-label">Exit Multiple</div></div>
+                <div class="kpi-box">
+                    <div class="kpi-val">€ 800K</div>
+                    <div class="kpi-label">Seed Round</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-val">€ 1.78M</div>
+                    <div class="kpi-label">Year 3 Revenue</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-val">€ 9.5M</div>
+                    <div class="kpi-label">Year 5 Revenue</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-val">30–38%</div>
+                    <div class="kpi-label">IRR (5 years)</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-val">5–8×</div>
+                    <div class="kpi-label">Exit Multiple</div>
+                </div>
             </div>
 
             <div class="seed-round-card">
@@ -1726,19 +1950,22 @@
                     <div class="team-photo"></div>
                     <div class="team-name">Dr. Fernanda Cosme</div>
                     <div class="team-role">CSO & Founder</div>
-                    <div class="team-bio">PhD in Food Science. Expert in enology and bioactive compounds. Lead researcher at CITAB/UTAD.</div>
+                    <div class="team-bio">PhD in Food Science. Expert in enology and bioactive compounds. Lead
+                        researcher at CITAB/UTAD.</div>
                 </div>
                 <div class="team-member stagger">
                     <div class="team-photo"></div>
                     <div class="team-name">Dr. Luís Filipe-Ribeiro</div>
                     <div class="team-role">R&D Director</div>
-                    <div class="team-bio">Expert in wine chemical composition and sensory analysis. Researcher with extensive industry experience.</div>
+                    <div class="team-bio">Expert in wine chemical composition and sensory analysis. Researcher with
+                        extensive industry experience.</div>
                 </div>
                 <div class="team-member stagger">
                     <div class="team-photo"></div>
                     <div class="team-name">Henrique Vilela</div>
                     <div class="team-role">Strategic Advisor</div>
-                    <div class="team-bio">Strategy and innovation specialist focusing on sustainable biotech and market internationalisation.</div>
+                    <div class="team-bio">Strategy and innovation specialist focusing on sustainable biotech and market
+                        internationalisation.</div>
                 </div>
             </div>
 
@@ -1746,7 +1973,14 @@
                 <div class="roadmap-timeline">
                     <div class="phase-card">
                         <div class="phase-icon green">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2v2"/><path d="M15 2v2"/><path d="M12 2v2"/><path d="M10 10l-3 8a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l-3-8V4h-4v6z"/><path d="M7 16h10"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M9 2v2" />
+                                <path d="M15 2v2" />
+                                <path d="M12 2v2" />
+                                <path d="M10 10l-3 8a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l-3-8V4h-4v6z" />
+                                <path d="M7 16h10" />
+                            </svg>
                         </div>
                         <div class="phase-head">
                             <span class="phase-title">PHASE 1</span>
@@ -1763,7 +1997,11 @@
                     </div>
                     <div class="phase-card">
                         <div class="phase-icon green">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="M9 12l2 2 4-4" />
+                            </svg>
                         </div>
                         <div class="phase-head">
                             <span class="phase-title">PHASE 2</span>
@@ -1780,7 +2018,13 @@
                     </div>
                     <div class="phase-card">
                         <div class="phase-icon bordo">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
                         </div>
                         <div class="phase-head">
                             <span class="phase-title">PHASE 3</span>
@@ -1848,14 +2092,18 @@
 
     <section id="contact">
         <div class="bg-mesh">
-            <div class="mesh-circle" style="width: 600px; height: 600px; background: var(--eco-bordo-dark); top: -200px; left: -100px; opacity: 0.15;"></div>
+            <div class="mesh-circle"
+                style="width: 600px; height: 600px; background: var(--eco-bordo-dark); top: -200px; left: -100px; opacity: 0.15;">
+            </div>
         </div>
         <div class="container reveal">
             <div class="contact-grid">
                 <div class="contact-info stagger">
                     <h2 class="section-title">Join the sustainable revolution.</h2>
-                    <p style="margin-bottom: 40px; font-size: 18px; color: var(--eco-text-muted);">We are seeking strategic partners and investors to scale our production and expand into international markets.</p>
-                    
+                    <p style="margin-bottom: 40px; font-size: 18px; color: var(--eco-text-muted);">We are seeking
+                        strategic partners and investors to scale our production and expand into international markets.
+                    </p>
+
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
                         <div>
@@ -1864,7 +2112,7 @@
                             Vila Real, Portugal
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">📧</div>
                         <div>
@@ -1873,7 +2121,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form-container stagger">
                     <form class="contact-form" id="ecoForm">
                         <div class="form-group">
@@ -1949,7 +2197,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    
+
                     // Stagger children if any
                     const staggerItems = entry.target.querySelectorAll('.stagger');
                     staggerItems.forEach((item, index) => {
@@ -2043,4 +2291,5 @@
         generateMolecularNetwork(document.querySelector('.molecular-container'));
     </script>
 </body>
+
 </html>
